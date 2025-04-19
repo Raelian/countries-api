@@ -1,0 +1,169 @@
+@use '../../styles/round-borders' as *;
+@use '../../styles/font' as *;
+@use '../../styles/boxshadow' as *;
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 3rem;
+    padding: 1rem;
+
+    .input-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        background-color: var(--element-color);
+        width: 100%;
+        max-width: 30rem;
+        height: 3rem;
+        padding: 1rem 2rem;
+        @include round-borders;
+        @include shadows;
+
+        .search-icon {
+            color: var(--input-color);
+        }
+
+        .country-input{
+            @include sharedFont(var(--input-color));
+            border: none;
+            width: 100%;
+            min-height: 1rem;
+            outline: none;
+
+            &::placeholder{
+                color: var(--input-color);
+                font-weight: 600;
+                opacity: .6;
+            }
+        }
+    }
+
+    .filter-container {
+        position: relative;
+        width: 10rem;
+        margin-left: auto;
+
+        @media screen and (max-width: 720px) {
+            margin-left: 0;
+        }
+
+        .filter-btn{
+            @include sharedFont($weight: 400);
+            @include shadows;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            @include round-borders;
+            background-color: var(--element-color);
+            width: inherit;
+            padding: 1rem;
+            height: 3rem;
+            cursor: pointer;
+
+            .down-arrow{
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .dropdown-menu {
+            @include sharedFont($weight: 400);
+            @include shadows;
+            position: absolute;
+            width: inherit;
+            background-color: var(--element-color);
+            top: 3.5rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+            @include round-borders;
+
+            .dropdown-item{
+                cursor: pointer;
+                
+                &::before{
+                    content: "";
+                    margin-right: 0;
+                    opacity: 0;
+                    transition: margin-right .5s ease-in-out, opacity .5s ease-in-out;
+                }
+
+                &:hover::before{
+                    content: ">";
+                    margin-right: .5rem;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .countries-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            li {
+                height: 20rem;
+                width: 100%;
+                max-width: 20rem;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--element-color);
+                padding-bottom: 2.5rem;
+                @include round-borders;
+                @include shadows;
+                
+
+                img {
+                    height: 60%;
+                    width: 100%;
+                    max-width: 20rem;
+                    border-radius: .3rem .3rem 0 0;
+                    margin-bottom: 1rem;
+                    background-color: var(--element-color);
+                    @include shadows;
+                }
+
+                h3 {
+                    padding: 0 1rem;
+                    margin-bottom: 1rem;
+                    @include sharedFont($font-size: 1.2rem);
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0 1rem;
+
+                    p:nth-child(1) {
+                        @include sharedFont;
+                    }
+
+                    p:nth-child(2) {
+                        @include sharedFont($weight: 400);
+                        margin-left: .3rem;
+                    }
+                } 
+            }
+        }
+    }
+}

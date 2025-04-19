@@ -1,0 +1,7 @@
+@mixin sharedFont($color: var(--text-color), $weight: 800, $font-size: var(--homepage-items-fs), $bg-color: var(--element-color)) {
+    font-family: var(--primary-font), sans-serif;
+    font-size: $font-size;
+    font-weight: $weight;
+    background-color: $bg-color;
+    color: $color;
+}

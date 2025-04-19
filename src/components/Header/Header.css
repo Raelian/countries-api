@@ -1,0 +1,30 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem 2.2rem;
+  background-color: var(--element-color);
+  box-shadow: 2px 2px 8px var(--shadow-color);
+}
+.nav-container h2 {
+  font-family: var(--primary-font), sans-serif;
+  font-size: var(--homepage-items-fs);
+  font-weight: 800;
+  background-color: var(--element-color);
+  color: var(--text-color);
+}
+.nav-container .toggle-btn {
+  font-family: var(--primary-font), sans-serif;
+  font-size: var(--homepage-items-fs);
+  font-weight: 800;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  border: none;
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+}
+.nav-container .toggle-btn svg {
+  margin-right: 0.5rem;
+}/*# sourceMappingURL=Header.css.map */

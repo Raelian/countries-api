@@ -1,0 +1,28 @@
+@import '../../styles/font';
+@import '../../styles/boxshadow';
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--element-color);
+    @include shadows;
+
+    h2 {
+        @include sharedFont;
+    }
+
+    .toggle-btn {
+        @include sharedFont($weight: 600);
+        border: none;
+        display: flex;
+        align-content: center;
+        cursor: pointer;
+
+        svg {
+            margin-right: .5rem;
+        }
+    }
+}
