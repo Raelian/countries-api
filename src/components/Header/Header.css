@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1rem 2.2rem;
+  padding: 1.5rem 1rem;
   background-color: var(--element-color);
   box-shadow: 2px 2px 8px var(--shadow-color);
 }
@@ -17,7 +17,7 @@
 .nav-container .toggle-btn {
   font-family: var(--primary-font), sans-serif;
   font-size: var(--homepage-items-fs);
-  font-weight: 800;
+  font-weight: 600;
   background-color: var(--element-color);
   color: var(--text-color);
   border: none;
