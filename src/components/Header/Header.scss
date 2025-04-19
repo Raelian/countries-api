@@ -1,5 +1,5 @@
-@import '../../styles/font';
-@import '../../styles/boxshadow';
+@use '../../styles/font' as *;
+@use '../../styles/boxshadow' as *;
 
 .nav-container {
     display: flex;
